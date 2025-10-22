@@ -1,0 +1,162 @@
+{
+  "personalInfo": {
+    "name": "Ashish Walia",
+    "title": "Full Stack Developer (Web & Mobile apps)",
+    "subtitle": "Building scalable applications across mobile, web, and cloud platforms",
+    "bio": [
+      "Hello! I'm Ashish, a full-stack software developer based in Delhi, India.",
+      "I specialize in building end-to-end solutions - from native mobile apps and cross-platform solutions to robust backend systems and cloud infrastructure. My expertise spans across Android, iOS, Flutter for mobile development, modern web frameworks like React and Next.js, and backend technologies including Node.js and Laravel.",
+      "With experience serving millions of users, I focus on delivering high-performance, scalable applications with seamless user experiences."
+    ],
+    "email": "ashish4walia@gmail.com",
+    "profileImage": "./assets/me.jpeg",
+    "socialLinks": {
+      "github": "https://github.com/ashiwalia",
+      "stackoverflow": "https://stackoverflow.com/users/7628459/ashish-walia"
+    }
+  },
+  "techStack": {
+    "mobile": ["Android", "Flutter", "iOS", "React Native"],
+    "frontend": ["React", "Next.js", "HTML5", "CSS3", "JavaScript", "TypeScript"],
+    "backend": ["Node.js", "Laravel", "Express.js"],
+    "database": ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
+    "cloud": ["AWS", "Google Cloud", "Firebase", "Digital Ocean"],
+    "tools": ["Git", "Docker", "REST APIs"]
+  },
+  "experience": [
+    {
+      "company": "Bar Uncle Professionals Pvt. Ltd.",
+      "location": "New Delhi",
+      "position": "Android and iOS Developer",
+      "period": "June 2016 - October 2017",
+      "type": "full-time"
+    },
+    {
+      "company": "Stucare Solutions Pvt. Ltd.",
+      "location": "New Delhi",
+      "position": "Sr. Android Developer",
+      "period": "November 2017 - September 2019",
+      "type": "full-time"
+    },
+    {
+      "company": "Jamir Digital Business Services (OPC) Private Ltd.",
+      "location": "Remote",
+      "position": "Full Stack Developer",
+      "period": "Contract",
+      "type": "contract"
+    },
+    {
+        "company": "Freelance (Multiple Clients)",
+        "location": "India",
+        "position": "Full Stack Developer (Web & Mobile Apps)",
+        "period": "October 2019 - October 2022",
+        "type": "freelance"
+    },
+    {
+        "company": "ISJ Digital Pvt. Ltd.",
+        "location": "Nagaland, India",
+        "position": "Full Stack Developer (Web & Mobile Apps)",
+        "period": "October 2022 - October 2025",
+        "type": "full-time"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Ayush Kavach",
+      "category": "mobile",
+      "description": "Covid-19 awareness app built for the government of India (U.P.) with over 1M downloads.",
+      "tags": ["Android", "Government", "Healthcare"],
+      "metrics": "1M+ downloads",
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.stucare.ayush&hl=en_IN"
+      },
+      "featured": true
+    },
+    {
+      "name": "Bingeboxx",
+      "category": "mobile",
+      "description": "Cross-platform OTT app for north east india with video streaming and subscription management features. I built the entire platform from scratch, including the mobile apps, backend services, and cloud infrastructure.",
+      "tags": ["Live Streaming", "Subscription Management", "Android", "iOS", "AWS", "MUX"],
+      "metrics": "50K+ downloads",
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.bingeboxx.app",
+        "appStore": "https://apps.apple.com/us/app/bingeboxx/id6736851943"
+      },
+      "featured": true
+    },
+    {
+      "name": "FoodSafari",
+      "category": "mobile",
+      "description": "Cross-platform food delivery app which I maintained from scratch including the mobile apps, backend services.",
+      "tags": ["Food delivery", "Geolocation", "Node.js", "Flutter", "Firebase"],
+      "metrics": "100K+ downloads",
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.iprismtech.fooddelivery&hl=en",
+        "appStore": "https://apps.apple.com/in/app/foodsafari/id1517776431"
+      },
+      "featured": true
+    },
+    {
+      "name": "Your Pain Fixer Clinic Web App",
+      "category": "web",
+      "description": "Web version of the Your Pain Fixer Clinic platform, providing seamless appointment booking and patient management.",
+      "tags": ["Healthcare", "Web Development", "AWS", "Next.js", "React"],
+      "links": {
+        "website": "https://yourpainfixer.com/"
+      },
+      "featured": false
+    },
+    {
+      "name": "Bingeboxx Web App",
+      "category": "web",
+      "description": "Web version of the Bingeboxx OTT platform, providing seamless video streaming and subscription management.",
+      "tags": ["Live Streaming", "Flutter", "Web Development", "AWS", "Cloudflare"],
+      "links": {
+        "website": "https://app.bingeboxx.com"
+      },
+      "featured": true
+    },
+    {
+      "name": "School ERP Web Portal",
+      "category": "web",
+      "description": "Web-based ERP portal for schools, facilitating administration, teacher, and student management.",
+      "tags": ["ERP", "Web Development", "AWS", "Laravel", "PHP"],
+      "links": {
+        "website": "https://drk3s.stucarecloud.in/login"
+      },
+      "featured": true
+    },
+    {
+      "name": "Stucare Cloud Parent",
+      "category": "mobile",
+      "description": "Cross-platform parent communication app, part of Stucare's comprehensive ERP solution for educational institutions.",
+      "tags": ["Android", "iOS", "EdTech", "ERP"],
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.stucare.cloud_parent&hl=en_IN",
+        "appStore": "https://apps.apple.com/in/app/stucare-cloud-parent/id1521603831"
+      },
+      "featured": true
+    },
+    {
+      "name": "Stucare Cloud Teacher",
+      "category": "mobile",
+      "description": "Teacher-facing mobile application for Stucare's educational ERP system.",
+      "tags": ["Android", "EdTech", "ERP"],
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.stucare.cloud_teacher&hl=en_IN"
+      },
+      "featured": false
+    },
+    {
+      "name": "Stucare Cloud Admin",
+      "category": "mobile",
+      "description": "Administrative mobile application for Stucare's school management system.",
+      "tags": ["Android", "EdTech", "Admin Portal"],
+      "links": {
+        "playStore": "https://play.google.com/store/apps/details?id=com.stucare.cloud_admin"
+      },
+      "featured": false
+    }
+    
+  ]
+}
