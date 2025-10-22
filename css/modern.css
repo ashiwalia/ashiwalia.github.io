@@ -157,8 +157,16 @@ nav {
     line-height: 1.7;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 18px 40px;
     background-color: transparent;
     color: var(--accent-color);
@@ -169,12 +177,35 @@ nav {
     font-weight: 500;
     transition: var(--transition);
     cursor: pointer;
+    font-family: inherit;
 }
 
 .cta-button:hover {
     background-color: rgba(100, 255, 218, 0.1);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+}
+
+.cta-button-secondary {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border-color: var(--accent-color);
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.4);
+}
+
+.cta-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cta-button i {
+    font-size: 0.9em;
 }
 
 /* Hero Visual - Code Window */
@@ -787,6 +818,17 @@ footer {
     
     .hero-title {
         font-size: 28px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 15px 30px;
     }
     
     .section-heading {
