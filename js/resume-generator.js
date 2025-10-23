@@ -1,4 +1,28 @@
-async function generateResumePDF() {
+// ATS-Friendly Resume PDF Generator
+// This creates a clean, parseable PDF that automated resume systems can read
+
+// Check URL parameters on page load
+function checkAutoDownload() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('download') === 'resume') {
+        // Wait for resume data to load, then download
+        const checkDataInterval = setInterval(() => {
+            if (resumeData) {
+                clearInterval(checkDataInterval);
+                setTimeout(() => generateResumePDF(true), 500);
+            }
+        }, 100);
+    }
+}
+
+// Call on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkAutoDownload);
+} else {
+    checkAutoDownload();
+}
+
+async function generateResumePDF(isAutoDownload = false) {
     if (!resumeData) {
         alert('Resume data is still loading. Please try again in a moment.');
         return;
@@ -226,15 +250,45 @@ async function generateResumePDF() {
         doc.save(fileName);
         
         // Show success message
-        showNotification('Resume downloaded successfully!', 'success');
+        if (!isAutoDownload) {
+            showNotification('Resume downloaded successfully!', 'success');
+        }
         
     } catch (error) {
         console.error('Error generating PDF:', error);
         showNotification('Error generating resume. Please try again.', 'error');
     } finally {
         // Restore button state
-        downloadBtn.innerHTML = originalText;
-        downloadBtn.disabled = false;
+        if (!isAutoDownload) {
+            downloadBtn.innerHTML = originalText;
+            downloadBtn.disabled = false;
+        }
+    }
+}
+
+// Copy resume download link to clipboard
+async function copyResumeLink() {
+    const baseUrl = window.location.origin + window.location.pathname;
+    const resumeLink = `${baseUrl}?download=resume`;
+    
+    try {
+        await navigator.clipboard.writeText(resumeLink);
+        showNotification('Resume link copied to clipboard!', 'success');
+        
+        // Change button text temporarily
+        const copyBtn = document.getElementById('copy-resume-link-btn');
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Link Copied!';
+        
+        setTimeout(() => {
+            copyBtn.innerHTML = originalText;
+        }, 3000);
+    } catch (error) {
+        console.error('Failed to copy link:', error);
+        
+        // Fallback: Show the link in a prompt
+        prompt('Copy this link to share your resume:', resumeLink);
+        showNotification('Please copy the link manually', 'info');
     }
 }
 

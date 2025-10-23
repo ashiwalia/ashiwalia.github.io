@@ -198,6 +198,18 @@ nav {
     box-shadow: 0 10px 20px rgba(100, 255, 218, 0.4);
 }
 
+.cta-button-outline {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+.cta-button-outline:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
 .cta-button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -808,6 +820,17 @@ footer {
     
     .profile-img-wrapper {
         max-width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-buttons {
+        gap: 15px;
+    }
+    
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 15px 25px;
     }
 }
 
